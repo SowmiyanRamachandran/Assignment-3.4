@@ -1,0 +1,12 @@
+NameNode :
+
+The NameNode is the centerpiece of an HDFS file system. It keeps the directory tree of all files in the file system, and tracks where across
+the cluster the file data is kept. It does not store the data of these files itself.
+
+Client applications talk to the NameNode whenever they wish to locate a file, or when they want to add/copy/move/delete a file.
+The NameNode responds the successful requests by returning a list of relevant DataNode servers where the data lives.
+
+Importance-
+1.NameNode knows the list of the blocks and its location for any given file in HDFS. With this information NameNode knows how to construct
+the file from blocks.
+2.NameNode stores the metadata of HDFS – the directory tree of all files in the file system, and tracks the files across the cluster.
